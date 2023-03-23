@@ -9,12 +9,10 @@ void main() {
     home: MyApp(),
   ));
 }
-
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   final List<Task> _tasks = [];
 
@@ -23,13 +21,11 @@ class _MyAppState extends State<MyApp> {
       _tasks.add(Task(name: name, dateTime: dateTime));
     });
   }
-
   void _toggleTask(Task task) {
     setState(() {
       task.isDone = !task.isDone;
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,6 +33,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Quản lý công việc'),
+          backgroundColor: Colors.greenAccent,
         ),
         body: Column(
 

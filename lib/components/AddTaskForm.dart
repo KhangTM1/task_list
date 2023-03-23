@@ -9,18 +9,15 @@ class AddTaskForm extends StatefulWidget {
   @override
   _AddTaskFormState createState() => _AddTaskFormState();
 }
-
 class _AddTaskFormState extends State<AddTaskForm> {
   late TextEditingController _taskController;
   String datatimeS = '';
-//   Color color = Colors.black;
   DateTime? datatimeDT;
   @override
   void initState() {
     super.initState();
     _taskController = TextEditingController();
   }
-
   @override
   void dispose() {
     _taskController.dispose();
@@ -65,10 +62,6 @@ class _AddTaskFormState extends State<AddTaskForm> {
                   );
                   datatimeS = DateFormat.yMd().add_Hm().format(_dateTime!);
                   datatimeDT = _dateTime;
-                  // color = _dateTime.isBefore(DateTime.now())
-                  //     ? Colors.red
-                  //     : Colors.blue;
-
                 });
               }
             }
@@ -90,8 +83,6 @@ class _AddTaskFormState extends State<AddTaskForm> {
 
         ),
       ],
-
-
     );
   }
 }
